@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Baby Doll';
+  src: url('../fonts/Baby\ Doll.ttf') format('truetype');
+}
+
+.menu-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.menu-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-item {
+  position: absolute;
+  padding: 5px 10px; /* Reducir padding superior e inferior */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.0); /* Eliminar fondo blanco con transparencia */
+  color: #eaebf1;
+  text-align: center;
+  font-family: 'Baby Doll', 'Roboto', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  
+  /* Agregar sombra detrás del cuadro de texto */
+  box-shadow: none; /* Si no deseas sombras en los contenedores */
+}
+
+.menu-item h2 {
+  /* Agregar sombra solo detrás del texto */
+  text-shadow: 1px 2px 8px rgba(54, 54, 54, 0.5); /* Sombra más pronunciada detrás del texto */
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+/* Ajusta la posición de cada texto según el dibujo */
+
+.cocina {
+  top: 55%; 
+  left: 60%;
+}
+
+.jardin {
+  top: 50%;
+  left: 28%;
+}
+
+.escaleras {
+  top: 60%;
+  left: 75%;
+}
+
+.cuarto {
+  top: 27%;
+  right: 13%;
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    font-size: 12px;
+  }
+}
