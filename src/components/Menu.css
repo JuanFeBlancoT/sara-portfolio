@@ -3,6 +3,8 @@
   src: url('../fonts/Baby\ Doll.ttf') format('truetype');
 }
 
+
+
 .menu-container {
   position: relative;
   width: 100%;
@@ -55,22 +57,22 @@
 
 .cocina {
   top: 55%; 
-  left: 60%;
+  left: 55%;
 }
 
 .jardin {
   top: 50%;
-  left: 28%;
+  left: 30%;
 }
 
 .escaleras {
   top: 60%;
-  left: 75%;
+  left: 70%;
 }
 
 .cuarto {
-  top: 27%;
-  right: 13%;
+  top: 29%;
+  right: 17%;
 }
 
 @media (max-width: 768px) {

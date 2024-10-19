@@ -4,7 +4,7 @@ function Escaleras() {
   return (
     <div>
       <h1>Escaleras</h1>
-      <p>Aquí encontrarás información sobre diseño y construcción de escaleras.</p>
+      <p>Aquí encontrarás las escaleras.</p>
     </div>
   );
 }
