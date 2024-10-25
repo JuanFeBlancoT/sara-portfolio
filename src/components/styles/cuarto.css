@@ -3,106 +3,142 @@
     font-family: 'Baby Doll';
     src: url('../../fonts/Baby Doll.ttf') format('truetype');
 }
-
 .room-container {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    transition: background-color 0.5s ease; /* Transición suave entre estados */
+    transition: background-color 0.5s ease;
 }
 
- /* Fondo oscuro cuando el estado isDark es verdadero */
 .room-container.dark {
-    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-  /* Imagen de fondo del cuarto */
 .room-background {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen de fondo para que no se corte */
-    z-index: 1; /* Asegura que la imagen de fondo esté detrás de todo */
+    object-fit: cover;
+    z-index: 1;
 }
 
-/* Capa oscura para oscurecer el fondo */
 .dark-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+    background-color: rgba(0, 0, 0, 0);
     z-index: 2;
-    transition: background-color 0.5s ease; /* Transición suave */
+    transition: background-color 0.5s ease;
 }
 
 .dark-overlay.active {
-    background-color: rgba(37, 24, 63, 0.5); /* Oscurecer cuando isDark está activo */
+    background-color: rgba(37, 24, 63, 0.5);
 }
 
-  /* Zona interactiva para el brillo */
 .interactive-zone {
     position: absolute;
-    top: 50%; /* Ajusta estas posiciones según la ubicación deseada */
+    top: 50%;
     left: 35%;
-    width: 200px; /* Tamaño de la zona interactiva */
+    width: 200px;
     height: 200px;
     z-index: 2;
     cursor: pointer;
 }
 
-  /* Imagen de brillo que aparece cuando se pasa el mouse */
 .glow-image {
     position: absolute;
     width: 1700px;
     height: auto;
-    transform: translate(-600px, -490px); 
+    transform: translate(-600px, -490px);
     z-index: 3;
-    pointer-events: none; /* No bloquea el clic en la zona */
+    pointer-events: none;
 }
 
-  /* Contenedor del libro abierto */
 .book-container {
     position: absolute;
-    top: 5%;
+    top: -2%;
     left: 10%;
-    transform: translateX(-50%); /* Centra horizontalmente el libro */
-    z-index: 4; /* Asegura que esté sobre la imagen de fondo */
+    transform: translateX(-50%);
+    z-index: 4;
     text-align: center;
-    transition: opacity 0.5s ease; /* Transición suave para mostrar el libro */
+    transition: opacity 0.5s ease;
 }
 
-  /* Imagen del libro */
 .book-image {
     position: absolute;
-    width: 1200px; /* Ajusta el tamaño según sea necesario */
+    width: 1200px;
     height: auto;
     object-fit: contain;
     z-index: 1;
 }
 
-/* Contenedor del texto del libro */
 .book-text {
     position: absolute;
-    font-family: 'Baby Doll', cursive; /* Aplicamos la tipografía */
-    font-size: 18px; /* Ajusta el tamaño del texto */
+    font-family: 'Baby Doll', cursive;
+    font-size: 18px;
     color: rgb(51, 46, 44);
     padding: 20px;
-    column-count: 2; /* Divide el texto en dos columnas */
-    column-gap: 100px; /* Espacio entre las columnas */
-    text-align: left; /* Justificación del texto para mejorar la apariencia */
+    column-count: 2;
+    column-gap: 100px;
+    text-align: left;
     z-index: 5;
     width: 820px;
-    transform: translate(22%, 20%); 
+    height: 410px;
+    column-fill: auto;
+    transform: translate(22%, 20%);
 }
 
-  /* Efecto para ocultar o mostrar el libro */
-.room-container .book-container {
-    opacity: 0;
+.navigation {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    color: rgb(132, 75, 30);
+    font-family: 'Baby Doll', cursive;
+    font-size: 24px;
+    z-index: 5;
 }
 
-.room-container.dark .book-container {
-    opacity: 1;
+.prev, .next {  
+    position: relative;
+    padding-left: 15px;
+    top:575px;
+    left:750px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    position: relative;
+    color: rgb(214, 141, 22); /* Color al hacer hover */
+}
+
+.prev.disabled, .next.disabled {
+    color: rgb(138, 104, 78); /* Color cuando no es posible realizar la acción */
+    cursor: not-allowed; /* Cambia el cursor para indicar que no está disponible */
+}
+
+.page-number {
+    position: relative;
+    top: 570px;
+    left: -55px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: rgb(51, 46, 44);
+}
+
+.close-zone {
+    font-size: 48px;
+    font-family: 'Baby Doll';
+    position: relative;
+    top: 80px;
+    right: -1180px;
+    color: white;
+    cursor: pointer;
+    z-index: 6;
 }
