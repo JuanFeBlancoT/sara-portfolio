@@ -78,6 +78,7 @@ const Cuarto = () => {
 
   const handleNext = () => {
     if (currentPage < textBlocks.length - 1) {
+      
       setCurrentPage(currentPage + 1);
     }
   };
