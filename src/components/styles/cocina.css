@@ -1,92 +1,127 @@
-.cocina-container{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+@font-face {
+  font-family: 'Baby Doll';
+  src: url('../../fonts/Baby Doll.ttf') format('truetype');
 }
-  
-  .cocina-bg{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-  }
 
-  .oscuro img {
-    filter: brightness(0.5); /* Oscurecer fondo cuando un `textBlock` está activo */
+@font-face {
+  font-family: 'Baloo Thambi 2';
+  src: url('../../fonts/BalooThambi2.ttf');
+}
+
+@font-face {
+  font-family: 'Sansita';
+  src: url('../../fonts/Sansita-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  .cocina-container{
+      position: relative;
+      width: 100vw;
+      height: 100vh;
   }
-  
-  /* Estilos de zonas sensibles */
-  .zona {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    cursor: pointer;
-    border: 20px dashed rgba(255, 0, 0, 0.7); /* Borde visible */
-    background-color: rgba(255, 255, 0, 0.3); /* Fondo amarillo semitransparente */
-    z-index: 2;
-  }
-  
-  .zona1 { top: 20%; left: 30%; }
-  .zona2 { top: 40%; left: 50%; }
-  .zona3 { top: 60%; left: 70%; }
-  .zona4 { top: 25%; left: 60%; }
-  .zona5 { top: 55%; left: 20%; }
-  .zona6 { top: 80%; left: 40%; }
-  
-  /* Estilos del libro */
-  .libro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    text-align: center;
-    z-index: 10;
-  }
-  
-  .libro h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .libro p {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-  
-  /* Botón de cierre */
-  .cerrar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  /* Navegación */
-  .navegacion {
+    
+    .cocina-bg{
+      position: absolute;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+
+    .oscuro img {
+      filter: brightness(0.5); /* Oscurecer fondo cuando un `textBlock` está activo */
+    }
+    
+    /* Estilos de zonas sensibles */
+    .zona {
+      position: absolute;
+      width: 120px;
+      height: 140px;
+      cursor: pointer;
+      /*border: 20px dashed rgba(255, 0, 0, 0.7); /* Borde visible */
+      /*background-color: rgba(255, 255, 0, 0.3); /* Fondo amarillo semitransparente */
+      z-index: 2;
+    }
+    
+    .zona1 { top: 30%; left: 9%; }
+    .zona2 { top: 47%; left: 30%; }
+    .zona3 { top: 30%; left: 37%; }
+    .zona4 { top: 30%; left: 49%; }
+    .zona5 { top: 30%; left: 60%; }
+    .zona6 { top: 45%; left: 70%; }
+    
+    /* Estilos del libro */
+    .libro {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 680px;
+      height: 680px;
+      padding: 20px;
+      background: url('../../images/libreta_cocina.png') center/cover no-repeat;
+      border-radius: 8px;
+      text-align: center;
+      z-index: 10;
+    }
+    
+    .libro h3 {
+      font-family: 'Baby Doll', cursive;
+      margin-left: 145px;
+      text-align: left;
+      padding-top: 70px;
+      color: rgb(51, 46, 44);
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    
+    .libro p {
+      font-family: 'Sansita';
+      line-height: 1.5rem;
+      width: 390px;
+      text-align: left;
+      color: rgb(70, 61, 58);
+      padding-left: 145px;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+    
+    /* Botón de cierre */
+    .cerrar {
+      font-family: 'Baby Doll', cursive;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 2.4em;
+      color: rgb(255, 255, 255);
+    }
+    
+    /* Navegación */
+    .navegacion {
+      position: relative;
+    font-family: 'Baby Doll', cursive;
     display: flex;
-    justify-content: space-between;
+    color: rgb(51, 46, 44);
+    align-items: center;
+    justify-content: center;
     font-size: 1em;
     font-weight: bold;
-  }
-  
-  .nav-text {
-    cursor: pointer;
-    color: black;
-  }
-  
-  .nav-text.disabled {
-    color: gray;
-    cursor: not-allowed;
-  }
-  
-  .nav-text:hover:not(.disabled) {
-    color: blue;
-  }
-  
+    gap: 40px; /* Espacio entre los elementos, ajusta según necesites */
+    }
+    
+    .nav-text {
+      cursor: pointer;
+      color: black;
+    }
+    
+    .nav-text.disabled {
+      color: rgb(138, 104, 78);
+      cursor: not-allowed;
+    }
+    
+    .nav-text:hover:not(.disabled) {
+      color: rgb(214, 141, 22); /* Color al hacer hover */
+    }
+    
