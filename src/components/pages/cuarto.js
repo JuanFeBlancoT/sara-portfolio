@@ -21,12 +21,13 @@ const textBlocks = [
     paragraphs: [
       "Quizás el día en que un profesor me dijo “¿y por qué no teatro?” descubrí que había asumido como algo que haría el resto de mi vida ese oficio que ni siquiera sabía podía considerarse una “carrera”. Siempre me he caracterizado por mi determinación y disciplina. Cuando tomo una decisión, me involucro completamente, y a mis dieciséis años ya la había tomado: iba a ser actriz y socióloga. Sí. Las dos. No la una, no la otra, ambas. La búsqueda se complicó cuando descubrí que universidades como la Universidad Nacional o los Andes no ofrecían teatro, y que en las universidades donde sí estaban las dos carreras, como la Pedagógica y la Distrital, no había posibilidad de hacer doble programa.",
       "Me sorprendió que, independientemente del carácter público o privado de las instituciones de educación superior, en Colombia hasta ahora damos valor, no sólo lo interdisciplinario,  sino a las ciencias sociales y por sobre todo a las artes como profesión. La jerarquización positivista de los saberes ha discriminado todo lo que no esté relacionado con nuestra cabeza lógico racional, y al salir de la burbuja de un colegio jesuita, cuyo modelo educativo tiene una visión un poco más integral, me hice consciente de que ese no es el modelo general de mi realidad occidentalizada.",
+      "La última universidad a la que nos llevó el colegio en el recorrido por las ferias de Universidades fue"
     ]
   },
   {
     title: "",
     paragraphs: [
-      "La última universidad a la que nos llevó el colegio en el recorrido por las ferias de Universidades fue la javeriana… mi última esperanza. Mi mejor amiga me acompañó a ver a “Los perros de la Impro” en una carpa, y pasados unos cuantos minutos, la miré con lágrimas en los ojos y le dije “la encontré”, y ella también lo supo. “Te veo aquí”, dijo en un abrazo que todavía me cobija. Jamás voy a olvidar ese día.",
+      "la javeriana… mi última esperanza.Mi mejor amiga me acompañó a ver a “Los perros de la Impro” en una carpa, y pasados unos cuantos minutos, la miré con lágrimas en los ojos y le dije “la encontré”, y ella también lo supo. “Te veo aquí”, dijo en un abrazo que todavía me cobija. Jamás voy a olvidar ese día.",
       "Si conocerse es viajar como una araña por los hilos de ésta trama de miles de inicios, nudos y desenlaces que se amarran con otros inicios, esta autoevaluación será eso. Un viaje consciente, crítico y reflexivo, a través de bitácoras y recuerdos en torno a los acontecimientos del día a día de una artista quien, como dice Maillard Chantal, es una soñadora que quiere saber qué se le oculta, y dialoga con esos instantes que parecen encapsular el sentido."
     ]
   },
