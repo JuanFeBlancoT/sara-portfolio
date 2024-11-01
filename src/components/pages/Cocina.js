@@ -5,7 +5,7 @@ import cocinabg from '../../images/Cocina.jpg'
 const Cocina = () => {
   // Definición de `textBlock` para cada zona
   const textBlockZona1 = [
-    { title: "", content: "Recuerdo una vez que mi mamá me explicaba el por qué el mesón está alrededor del horno, y es porque el hogar se hace alrededor del fuego. Es algo que nunca se me va a olvidar.<br/><br/><br/><br/>A la mesa se encuentran<br/><br/>Angie y Nicolás;<br/><br/>Sofía, Maria Adelaida y Fernando.<br><br/><br><br/><br><br/><br><br/>" }
+    { title: "", content: "<br></br><br></br>Recuerdo una vez que mi mamá me explicaba el por qué el mesón está alrededor del horno, y es porque el hogar se hace alrededor del fuego. Es algo que nunca se me va a olvidar.<br/><br/><br/><br/>A la mesa se encuentran<br/><br/>Angie y Nicolás;<br/><br/>Sofía, Maria Adelaida y Fernando.<br><br/><br><br/><br><br/><br><br/>" }
   ];
   
   const textBlockZona2 = [

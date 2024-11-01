@@ -116,11 +116,16 @@
 }
 
 .book-text p {
+    font-size: 17px;
     font-family: 'Sansita', cursive;
 }
 
 .book-text h3{
     letter-spacing:.8px;
+}
+
+.book-text i {
+    font-size: 15px;
 }
 
 .navigation {
@@ -149,7 +154,7 @@
     position: relative;
     padding-left: 15px;
     top:575px;
-    left:750px;
+    left:770px;
     cursor: pointer;
     transition: color 0.3s;
 }
@@ -167,7 +172,7 @@
 .page-number {
     position: relative;
     top: 570px;
-    left: 240px;
+    left: 270px;
     transform: translateX(-50%);
     font-size: 18px;
     color: rgb(51, 46, 44);

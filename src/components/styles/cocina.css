@@ -15,6 +15,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Chewy';
+  src: url('../../fonts/Chewy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
   .cocina-container{
       position: relative;
       width: 100vw;
@@ -66,7 +73,8 @@
     }
     
     .libro h3 {
-      font-family: 'Baby Doll', cursive;
+      font-family: 'Chewy', cursive;
+      letter-spacing:.8px;
       margin-left: 145px;
       text-align: left;
       padding-top: 70px;
@@ -77,7 +85,8 @@
     
     .libro p {
       font-family: 'Sansita';
-      line-height: 1.5rem;
+      font-size: 17px;
+      line-height: 1.4rem;
       width: 390px;
       text-align: left;
       color: rgb(70, 61, 58);
@@ -86,12 +95,20 @@
       margin-bottom: 20px;
     }
     
+    .libro i {
+      font-size: 15px;
+    }
+
+    .libro b {
+      font-size: 17px;
+    }
+
     /* Botón de cierre */
     .cerrar {
       font-family: 'Baby Doll', cursive;
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 30px;
+      right: 30px;
       cursor: pointer;
       font-weight: bold;
       font-size: 2.4em;
@@ -100,19 +117,24 @@
     
     /* Navegación */
     .navegacion {
-      position: relative;
-    font-family: 'Baby Doll', cursive;
-    display: flex;
-    color: rgb(51, 46, 44);
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    font-weight: bold;
-    gap: 40px; /* Espacio entre los elementos, ajusta según necesites */
+      position: absolute; /* Permite colocarla en cualquier parte de la pantalla */
+      top: 615px; /* Ajusta según donde la quieras en la pantalla */
+      left: 225px; /* Puedes cambiar a 'right' o 'bottom' según sea necesario */
+      font-family: 'Chewy', cursive;
+      letter-spacing:.8px;
+      display: flex;
+      color: rgb(51, 46, 44);
+      align-items: center;
+      justify-content: center;
+      font-size: 1em;
+      font-weight: bold;
+      gap: 40px; /* Espacio entre los elementos */
+      z-index: 15; /* Asegúrate de que esté encima de otros elementos */
     }
     
     .nav-text {
       cursor: pointer;
+      font-size: 18px;
       color: black;
     }
     
