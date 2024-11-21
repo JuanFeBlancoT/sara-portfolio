@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
-import portadaimage from '../../images/Portafolio-194.jpg';
+import portadaimage from '../../images/IMG_7031.jpg';
 import gardenplant from '../../images/arbustos.png'
 import cloud from '../../images/nube.png';
 

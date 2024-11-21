@@ -6,7 +6,7 @@ import BackButton from '../BackButton';
 const Cocina = () => {
   // Definición de `textBlock` para cada zona
   const textBlockZona1 = [
-    { title: "", content: "<br></br>Recuerdo una vez que mi mamá me explicaba el por qué el mesón está alrededor del horno, y es porque el hogar se hace alrededor del fuego. Es algo que nunca se me va a olvidar.<br/><br/><br/><br/>A la mesa se encuentran<br/><br/><b>Profesores:</b><br></br>Fernando Montes Joya, María Adelaida Palacio y Sofía Monsalve Fiori<br><br/><b>Compañeros:</b><br><br/>Nicolás Gómez Torres y Angie Valentina Núñez Parada<br><br/>" }
+    { title: "", content: "Recuerdo una vez que mi mamá me explicaba el por qué el mesón está alrededor del horno, y es porque el hogar se hace alrededor del fuego.<br></br>Es algo que nunca se me va a olvidar.<br/><br/>Recibo y ofrezco este alimento, esta energía, este cuerpo, esta compañía.<br/><br/>A la mesa se encuentran<br/><br/><b>Profesores:</b><br></br>Fernando Montes Joya, María Adelaida Palacio y Sofía Monsalve Fiori<br><br/><b>Compañeros:</b><br><br/>Nicolás Gómez Torres y Angie Valentina Núñez Parada<br><br/><i>Haz click sobre las personas en la mesa</i>" }
   ];
   
   const textBlockZona2 = [
@@ -16,7 +16,7 @@ const Cocina = () => {
     { title: "", content: "porque es una belleza o una divinidad que carga el sello de la naturaleza, que no nos pertenece, pero que somos parte de ella, y que requiere un trabajo de ceder la voluntad y de ponerse al servicio de la naturaleza creativa en uno mismo.<br></br>Un elemento fundamental para acceder a esta dimensión del arte, creo yo, es la capacidad de servir. Una capacidad que puede tener un artista de servir al alma humana, una capacidad ecológica de servir sin razón, sin porqué, pues la razón y el por qué son los reinos del ego, mientras que la sinrazón y el desinterés son los reinos de la creación. Fue muy bello ver cómo la dimensión poética y el trabajo sobre la poesía abrieron un portal de comprensión y de visión del mundo del arte para SaraLu. Fue como si piuuuf, en un segundo el universo del arte le permitiera “ver el jardín desde la ventana”. Quizá SaraLu tiene esa capacidad de abrir una puerta en la que veo la obra de la belleza operando en nuestra realidad ordinaria y burda.<br></br>Severa responsabilidad que tiene usted con el mundo."},
     { title: "", content: "Pude ver, asistir, y participar en cómo los materiales, los escritos y acciones de SaraLu se poblaron con sus memorias. Primero, con sus familiares cercanos, pero luego también con su linaje creativo que trasciende el tiempo. Como si ella pudiera escuchar sus voces muy lejanas. De lo originario que no tiene tiempo, siendo al mismo tiempo personas. Tolstoi dijo, descubre tu aldea y serás universal, sólo que cuando saralu describe su aldea está poblada de sabedoras, curanderas, sacerdotisas, sapos, ríos, animales fantásticos, ballenas que vuelan, y que de alguna extraña manera logra traer a este mundo, darles vida y una forma en sus materiales creativos.<br></br>En el espacio del ensamble 'Quien me Navega es el Mar', los estudiantes debían preparar individualmente, y luego en grupos, acciones y materiales de actuación. En las propuestas que SaraLu realizó pude ver que había desarrollado un pensamiento crítico con respecto a las Acciones Físicas, es decir que entendió, asimiló y pudo formularlo en acción, no teóricamente sino en la realización de sus materiales, y eso no se logra si corazón, pensamiento"},
     { title: "", content: " y cuerpo no están entretejidos.<br></br>Pude percibir allí que SaraLu captó algo que para mí es fundamental, y es la dimensión del actor-artista, es decir un actor que puede proponer un material que ya de por sí es una obra de arte porque contiene una imagen, un vestuario, una propuesta conceptual, estética, un texto, una energía escénica, etc. SaraLu entendió que el ejercicio del actor puede ser un ejercicio creativo en toda su dimensión, y no sólo interpretativo o de representación, o de ejecución de un rol. Y creo que en nuestro contexto es muy importante tener esa autonomía, que no dependa de un profesor o un director, o alguien que conduzca el trabajo, sino que el actor pueda asumirse como un artista, y serlo. Esto es una conjunción de disciplina, observación, sensibilidad, intuición, y escucha, no egoica sino ecológica.<br></br>En todos los espacios que he podido compartir con SaraLu, fue, ha sido y es un placer trabajar con ella, por la alegría y el amor que porta en el trabajo, con gran rigurosidad. Tiene esa capacidad increíble de portar luz a lo que uno está"},
-    { title: "", content: " haciendo, y eso sin caer en un falso bienestar o fachada:<br></br>“Nunca perseguí la gloria<br>ni dejar en la memoria<br>de los hombres mi canción;<br>yo amo los mundos sutiles,<br>ingrávidos y gentiles<br>como pompas de jabón.<br>Me gusta verlos pintarse<br>de sol y grana, volar<br>bajo el cielo azul, temblar<br>súbitamente y quebrarse”."}
+    { title: "", content: " haciendo, y eso sin caer en un falso bienestar o fachada:<br></br>“Nunca perseguí la gloria<br>ni dejar en la memoria<br>de los hombres mi canción;<br>yo amo los mundos sutiles,<br>ingrávidos y gentiles<br>como pompas de jabón.<br>Me gusta verlos pintarse<br>de sol y grana, volar<br>bajo el cielo azul, temblar<br>súbitamente y quebrarse”.<br></br>Buen viento y buena mar"}
   ];
   
   const textBlockZona3 = [
@@ -75,6 +75,15 @@ const Cocina = () => {
       setCurrentIndex(currentIndex - 1);
     }
   };
+
+  // Abrir automáticamente el `textBlockZona1` tras 2 segundos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      openBookWithTextBlock(textBlockZona1);
+    }, 1500);
+
+    return () => clearTimeout(timer); // Limpiar el timeout si el componente se desmonta
+  }, []);
 
   return (
     <div className={`cocina-container ${currentTextBlock ? 'oscuro' : ''}`}>

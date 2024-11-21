@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/carousel.css';
 import photoFlor1 from '../../images/Portafolio-025.jpg';
 import photoFlor2 from '../../images/AV2A1849.jpg';
-import photoFlor3 from '../../images/AV2A1818-Editar.jpg';
+import photoFlor3 from '../../images/AV2A1799-Editar.png';
 import photoFlor4 from '../../images/AV2A1872.jpg';
 import photoRio1 from '../../images/Portafolio-194.jpg';
 import photoRio2 from '../../images/AV2A2080.jpg';

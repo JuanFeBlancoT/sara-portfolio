@@ -1,0 +1,79 @@
+/* Contenedor general */
+.contact-container {
+  background-image: url('../../images/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: #f0f0f0;
+  font-family: 'Sansita', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  min-height: 100vh;
+}
+
+/* Sección de cada bloque */
+.contact-section {
+  background: rgba(26, 19, 13, 0.684);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 40px 40px 80px 40px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos */
+.contact-title {
+  font-family: 'Chewy', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffe2b0;
+}
+
+.b {
+    color: white;
+}
+
+/* Estilo de párrafos */
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d5d2c7;
+}
+
+/* Enlaces */
+.contact-section a {
+  color: #ffddaa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Botón para descargar CV */
+.contact-button {
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Chewy', cursive;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(138, 60, 60, 0.2);
+}
+
+.contact-button:hover {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}

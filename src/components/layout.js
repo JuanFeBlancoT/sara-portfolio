@@ -28,13 +28,13 @@ function Layout() {
       {menuOpen && (
         <div className="dropdown-menu">
           <ul>
-            <li onClick={() => navigateTo('/')}>Inicio</li>
+            <li onClick={() => navigateTo('/')}>Declaración de artista</li>
             <li onClick={() => navigateTo('/menu')}>Menú</li>
-            <li onClick={() => navigateTo('/jardin')}>Jardín</li>
-            <li onClick={() => navigateTo('/escaleras')}>Escaleras</li>
-            <li onClick={() => navigateTo('/cocina')}>Cocina</li>
-            <li onClick={() => navigateTo('/cuarto')}>Cuarto</li>
-            <li onClick={() => navigateTo('/estanteria')}>Estantería</li>
+            <li onClick={() => navigateTo('/escaleras')}>Fotos y reel</li>
+            <li onClick={() => navigateTo('/cocina')}>Evaluaciones</li>
+            <li onClick={() => navigateTo('/cuarto')}>Autoevaluación</li>
+            <li onClick={() => navigateTo('/estanteria')}>Trabajos escritos</li>
+            <li onClick={() => navigateTo('/contacto')}>Agradecimientos y contacto</li>
           </ul>
         </div>
       )}

@@ -10,7 +10,7 @@ const Estanteria = () => {
   return (
     <div className="estanteria-container">
       <BackButton />
-      <h1 className="estanteria-title">Bienvenido a mi estantería de autoría</h1>
+      <h1 className="estanteria-title">Esta es la estantería de autoría</h1>
       <img src={cloud} className="cloudy cloud-1" alt="Cloud 1" />
       <img src={cloud} className="cloudy cloud-2" alt="Cloud 2" />
       <img src={cloud} className="cloudy cloud-3" alt="Cloud 3" />

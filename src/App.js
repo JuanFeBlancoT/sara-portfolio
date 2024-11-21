@@ -9,6 +9,7 @@ import Cuarto from './components/pages/cuarto';
 import Estanteria from './components/pages/estanteria';
 import Layout from './components/layout';
 import Carousel from './components/pages/carousel';
+import Contact from './components/pages/Contact';
 import { useLocation } from "react-router-dom";
 
 const PdfViewer = ({ file }) => (
@@ -31,6 +32,7 @@ function App() {
           <Route path="cocina" element={<Cocina />} />
           <Route path="cuarto" element={<Cuarto />} />
           <Route path="estanteria" element={<Estanteria />} />
+          <Route path="contacto" element={<Contact />} />
           {/* Ruta dinámica para el carrusel */}
           <Route path="carousel/:type" element={<Carousel />} />
 
