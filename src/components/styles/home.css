@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'Sansita';
+  src: url('../../fonts/Sansita-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Chewy';
+  src: url('../../fonts/Chewy-Regular.ttf') format('truetype');
+}
+
+/* Contenedor principal */
+.home-container {
+  background-image: url('../../images/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 205vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Sansita', sans-serif;
+}
+
+.cloudy-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+}
+
+.cloudy {
+  
+}
+
+.cloud-1 {
+  width: 50%;
+  top: 60%;
+  left: 75%;
+  opacity: 0.5;
+}
+
+.cloud-2 {
+  width: 30%;
+  top: 75%;
+  right: 10%;
+  opacity: 0.5;
+}
+
+.cloud-3 {
+  width: 40%;
+  bottom: 20%;
+  left: 15%;
+  opacity: 0.6;
+}
+
+.cloud-4 {
+  width: 25%;
+  top: 50%;
+  right: 25%;
+  opacity: 0.5;
+}
+
+.cloud-5 {
+  width: 60%;
+  bottom: 5%;
+  right: 45%;
+  opacity: 0.7;
+}
+
+
+.home-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.arbustos-image{
+  position: absolute;
+  bottom: 0;        
+  left: 0; 
+  width: 100%;
+}
+
+.home-image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.home-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4); 
+  border-radius: 2px;
+}
+
+.home-overlay-text{
+  z-index: 2;
+  margin-top: 350px;
+  margin-left: 80px;
+}
+
+.home-overlay h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0px;
+  text-align: left;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.home-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.home-overlay p {
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+/* Dos columnas */
+.home-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.home-column {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.home-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #CD3521;
+  z-index: 2;
+}
+
+.home-column p {
+  font-size: 1rem;
+  color: #291e1c;
+  z-index: 2;
+}
+
+.home-column i {
+  font-style: italic;
+  color: #291e1c;
+  z-index: 2;
+}
+
+/* Botón centrado */
+.home-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.home-container.zoom-blur {
+  transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+  transform: scale(1.2);
+  filter: blur(5px);
+}
+
+.home-container.normal {
+  transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+  transform: scale(1);
+  filter: blur(10);
+}
+
+/* Para el botón centrado */
+.home-button-container {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+
+.home-button {
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  font-family: 'Chewy', cursive;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(138, 60, 60, 0.2);
+  z-index: 10;
+}
+
+.home-button:hover {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}

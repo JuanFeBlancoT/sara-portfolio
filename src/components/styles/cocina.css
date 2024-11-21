@@ -45,8 +45,6 @@
       width: 120px;
       height: 140px;
       cursor: pointer;
-      /*border: 20px dashed rgba(255, 0, 0, 0.7); /* Borde visible */
-      /*background-color: rgba(255, 255, 0, 0.3); /* Fondo amarillo semitransparente */
       z-index: 2;
     }
     
@@ -117,9 +115,9 @@
     
     /* Navegación */
     .navegacion {
-      position: absolute; /* Permite colocarla en cualquier parte de la pantalla */
-      top: 615px; /* Ajusta según donde la quieras en la pantalla */
-      left: 225px; /* Puedes cambiar a 'right' o 'bottom' según sea necesario */
+      position: absolute;
+      top: 615px; 
+      left: 225px; 
       font-family: 'Chewy', cursive;
       letter-spacing:.8px;
       display: flex;
@@ -128,8 +126,8 @@
       justify-content: center;
       font-size: 1em;
       font-weight: bold;
-      gap: 40px; /* Espacio entre los elementos */
-      z-index: 15; /* Asegúrate de que esté encima de otros elementos */
+      gap: 40px; 
+      z-index: 15; 
     }
     
     .nav-text {
@@ -144,6 +142,6 @@
     }
     
     .nav-text:hover:not(.disabled) {
-      color: rgb(214, 141, 22); /* Color al hacer hover */
+      color: rgb(214, 141, 22); 
     }
     

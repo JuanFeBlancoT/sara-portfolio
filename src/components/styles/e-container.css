@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Sansita';
+  src: url('../../fonts/Sansita-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chewy';
+  src: url('../../fonts/Chewy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.estanteria-container {
+  background-image: url('../../images/fondo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  height: 100vh;
+  color: #f0f0f0;
+  overflow: auto;
+}
+
+.cloudy {
+  position: absolute;
+  z-index: 1;
+}
+
+.cloud-1 {
+  width: 50%;
+  top: 21%;
+  left: 20%;
+}
+
+.cloud-2 {
+  width: 30%;
+  top: 30%;
+  right: 10%;
+}
+
+.cloud-3 {
+  width: 40%;
+  bottom: 20%;
+  left: 15%;
+}
+
+.cloud-4 {
+  width: 25%;
+  top: 50%;
+  right: 25%;
+}
+
+.cloud-5 {
+  width: 60%;
+  bottom: 10%;
+  right: 5%;
+}
+
+.estanteria-title {
+  font-size: 2.5rem;
+  color: rgb(51, 46, 44);
+  margin-bottom: 40px;
+  font-family: 'Chewy', cursive;
+  text-align: center;
+}
+
+.estanteria-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.estanteria-buttons div {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 214, 170, 0.3);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(120, 86, 39, 0.2);
+  max-width: 400px;
+  text-align: center;
+  z-index: 2;
+}
+
+.estanteria-buttons h2 {
+  font-size: 1.8rem;
+  font-family: 'Sansita', sans-serif;
+  margin-bottom: 10px;
+  color: #CD3521;
+}
+
+.estanteria-buttons h3 {
+  font-size: 1.2rem;
+  font-family: 'Sansita', sans-serif;
+  margin-bottom: 15px;
+  color: #613D39;
+}
+
+.estanteria-buttons p {
+  font-family: 'Sansita', sans-serif;
+  font-size: 1rem;
+  color: #613D39;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.estanteria-button {
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  margin: 40px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Chewy', cursive;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(138, 60, 60, 0.2);
+}
+
+.estanteria-button:hover {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}

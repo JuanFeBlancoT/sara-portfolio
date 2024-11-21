@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/jardin.css';
 import jardinImage from '../../images/jardin-casa.jpeg';
+import BackButton from '../BackButton';
 
 function Jardin() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -13,11 +14,11 @@ function Jardin() {
       const scrollY = window.scrollY;
       setScrollPosition(scrollY);
 
-      // Definimos los rangos de scroll para cada momento
+      //Definición de los rangos de scroll para cada momento
       if (scrollY >= 0 && scrollY < 500) {
-        setCurrentMoment(1); // Nuevo primer momento, sin texto
+        setCurrentMoment(1);
       } else if (scrollY >= 500 && scrollY < 1000) {
-        setCurrentMoment(2); // El antiguo momento 1
+        setCurrentMoment(2); 
       } else if (scrollY >= 1000 && scrollY < 1500) {
         setCurrentMoment(3);
       } else if (scrollY >= 1500 && scrollY < 2000) {
@@ -28,11 +29,10 @@ function Jardin() {
         setCurrentMoment(6);
       } else if (scrollY >= 3000 && scrollY < 3500) {
         setCurrentMoment(7);
-      } else if (scrollY >= 3500) {
+      } else if (scrollY >= 3500 && scrollY < 4000 ) {
         setCurrentMoment(8);
-        // Si llega al último momento y se sigue haciendo scroll, redirigimos al menú
-        if (scrollY >= 3500) {
-          navigate('/');
+        if (scrollY >= 3750) {
+          navigate('/menu');
         }
       }
     };
@@ -46,28 +46,30 @@ function Jardin() {
 
   // Valores de transformación para cada momento
   const transformValues = [
-    { scale: 1, translateX: 0, translateY: 0 },     // Nuevo momento 1 (sin texto)
-    { scale: 2.2, translateX: -300, translateY: -195 }, // El antiguo momento 1
+    { scale: 1, translateX: 0, translateY: 0 },
+    { scale: 2.5, translateX: -375, translateY: -220 },
     { scale: 2.3, translateX: 300, translateY: -195 },
-    { scale: 2.3, translateX: 300, translateY: -30 },
+    { scale: 2.3, translateX: 300, translateY: -50 },
     { scale: 2.3, translateX: -100, translateY: -30 },
     { scale: 2.3, translateX: -200, translateY: 200 },
     { scale: 2.3, translateX: 300, translateY: 200 },
+    { scale: 5, translateX: 375, translateY: 250 }
   ];
 
   const currentTransform = transformValues[currentMoment - 1];
 
   return (
     <div className="zoom-container">
+      <BackButton />
       <div
         className="background"
         style={{
           transform: `scale(${currentTransform.scale}) translate(${currentTransform.translateX}px, ${currentTransform.translateY}px)`,
-          transition: 'transform 0.8s ease-in-out', // Suaviza el movimiento
+          transition: 'transform 0.8s ease-in-out',
         }}
       >
         <img src={jardinImage} alt="Jardín" className="background-image" />
-        {/* El texto solo comienza desde el momento 2 */}
+        
         {currentMoment >= 2 && (
           <div className={`text moment-1 ${currentMoment === 2 ? 'visible' : 'hidden'}`}>
             Esta es la casa
@@ -100,7 +102,7 @@ function Jardin() {
         )}
         {currentMoment === 8 && (
           <div className={`text moment-7 ${currentMoment === 8 ? 'visible' : 'hidden'}`}>
-            Momento 7: Tips finales
+            
           </div>
         )}
       </div>
